@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.radwan_pc.co_workspace">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +26,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.HomeActivity" />
+        <activity android:name=".view.WSpaceProfileActivity" />
+        <activity android:name=".view.AboutUsActivity" />
+        <activity android:name=".view.RegistrationActivity" />
+        <activity android:name=".view.MyPlacesActivity" />
+        <activity android:name=".view.FavoritsActivity" />
+        <activity android:name=".view.UserProfileActivity" />
+        <activity android:name=".view.RoomsActivity" />
+        <activity android:name=".view.AddRoomActivity" />
+        <activity android:name=".view.FeaturesActivity" />
+        <activity android:name=".view.AddPlaceActivity" />
+        <activity android:name=".view.LoginActivity"></activity>
     </application>
 
 </manifest>
