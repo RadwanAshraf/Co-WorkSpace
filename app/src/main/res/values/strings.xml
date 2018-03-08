@@ -3,7 +3,26 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string name="registration">Registration</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="phone">Phone</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_npassword">Re-enter\npassword</string>
+    <string name="phone">Phone</string>
+    <string name="city">City</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="singup_your_workspace">Singup your workspace</string>
+    <string name="about_us">About us</string>
+    <string name="us_description">This is a wonderful description explaining who we are and what we did.</string>
+    <string name="role">Role</string>
+    <string name="name_surname">Name Surname</string>
 
 </resources>
