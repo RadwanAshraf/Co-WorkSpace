@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.radwan_pc.co_workspace.view.FeaturesActivity">
+    android:weightSum="5"
+    tools:context="com.radwan_pc.co_workspace.view.FeaturesActivity"
+    android:background="@drawable/gradient_background">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/toolbar_layout"/>
+
+
+        <ListView
+            android:id="@+id/ListView_feature"
+            tools:listitem="@layout/feature_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5">
+
+
+        </ListView>
+
+
+
+</LinearLayout>
