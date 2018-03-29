@@ -11,6 +11,13 @@ public class Room {
     private int maxUser;
     private int priceHour;
 
+    public Room()
+    {
+        roomID=0;
+        maxUser=0;
+        priceHour=0;
+
+    }
     public Room(int roomID, int maxUser, int priceHour) {
         this.roomID = roomID;
         this.maxUser = maxUser;
