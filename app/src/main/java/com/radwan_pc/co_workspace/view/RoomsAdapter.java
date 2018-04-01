@@ -66,11 +66,11 @@ public class RoomsAdapter extends BaseAdapter implements ListAdapter,teste {
         TextView textView2=view.findViewById(R.id.tv_priceRoomItem);
         TextView textView3=view.findViewById(R.id.tv_roomNum);
 
-        textView1.setText("Max Users  "+String.valueOf(teste.arr.get(i).getMaxUser()));
+        textView1.setText("Capacity:  "+String.valueOf(teste.arr.get(i).getMaxUser()));
 
-        textView2.setText("Price  "+String.valueOf(teste.arr.get(i).getPriceHour())+" EGP/h");
+        textView2.setText("Price: "+String.valueOf(teste.arr.get(i).getPriceHour())+" EGP/h");
 
-        textView3.setText("ROOM "+String.valueOf(i+1));
+        textView3.setText("ROOM"+String.valueOf(i+1));
 
         deleteButton.setTag(i);
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
@@ -84,25 +85,25 @@ public class FeatureAdapter extends BaseAdapter implements ListAdapter{
         ImageView imageViewPng=view.findViewById(R.id.Image_featIcon);
         imageViewPng.setImageResource(getDrawable(featuresPNG.get(i)));
 
-        final RadioButton radioButton=view.findViewById(R.id.RadioButton_featureItem) ;
-        radioButton.setTag(i);
+        final CheckBox checkBox=view.findViewById(R.id.checkbox_featureItem) ;
+        checkBox.setTag(i);
         if(list.get(i).charAt(0)=='0')
         {
-            radioButton.setChecked(false);
+            checkBox.setChecked(false);
         }
-        else radioButton.setChecked(true);
+        else checkBox.setChecked(true);
 
-        radioButton.setOnClickListener(new View.OnClickListener() {
+        checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(list.get((int)radioButton.getTag()).charAt(0)=='0')
+                if(list.get((int)checkBox.getTag()).charAt(0)=='0')
                 {
-                    list.set((int)radioButton.getTag(),"1");
-                    radioButton.setChecked(true);
+                    list.set((int)checkBox.getTag(),"1");
+                    checkBox.setChecked(true);
 
                 }else{
-                    list.set((int)radioButton.getTag(),"0");
-                    radioButton.setChecked(false);
+                    list.set((int)checkBox.getTag(),"0");
+                    checkBox.setChecked(false);
                 }
 
             }

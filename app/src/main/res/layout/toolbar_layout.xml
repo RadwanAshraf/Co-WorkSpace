@@ -3,11 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradient_background"
+    android:background="@color/colorPrimary"
     android:minHeight="?attr/actionBarSize"
     android:id="@+id/toolbar"
-    app:titleTextColor="#FFF">
-
-
-
+    app:titleTextColor="#ffffff">
 </android.support.v7.widget.Toolbar>
