@@ -5,9 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="5"
     tools:context="com.radwan_pc.co_workspace.view.FeaturesActivity"
-    android:background="@drawable/gradient_background">
+   >
 
     <include layout="@layout/toolbar_layout"/>
 
@@ -15,10 +14,9 @@
         <ListView
             android:id="@+id/ListView_feature"
             tools:listitem="@layout/feature_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5">
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          >
 
         </ListView>
 

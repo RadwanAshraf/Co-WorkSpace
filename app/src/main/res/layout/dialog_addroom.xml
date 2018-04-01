@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="5dp">
 
@@ -19,7 +20,10 @@
 
         android:id="@+id/input_layout_max_user"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        app:hintTextAppearance="@color/colorPrimaryDark"
+        >
     <EditText
         android:id="@+id/ET_maxUser"
         android:layout_width="match_parent"
@@ -28,7 +32,6 @@
         android:layout_marginTop="10dp"
         android:hint="@string/room_capacity"
         android:textColor="@android:color/black"
-        android:textColorHint="@color/colorAccent"
         android:inputType="number"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -37,6 +40,7 @@
 
         android:id="@+id/input_layout_price"
         android:layout_width="match_parent"
+        android:textColorHint="@color/colorPrimaryDark"
         android:layout_height="wrap_content">
     <EditText
         android:id="@+id/ET_price"
@@ -45,7 +49,6 @@
         android:layout_marginTop="5dp"
         android:hint="@string/price_hour"
         android:textColor="@android:color/black"
-        android:textColorHint="@color/colorAccent"
         android:inputType="number"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -56,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/add"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:textColor="@android:color/white"
         android:textSize="25dp"
         android:layout_marginTop="10dp"/>

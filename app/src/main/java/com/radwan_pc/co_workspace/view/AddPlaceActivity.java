@@ -30,7 +30,6 @@ public class AddPlaceActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE=100;
     ImageView imageView;
-    EditText editText;
     Button nextButton;
     Uri imageUri;
     Toolbar toolbar;
@@ -39,8 +38,7 @@ public class AddPlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_place);
         imageView=findViewById(R.id.Image_profile);
-        editText=findViewById(R.id.ET_profileImage);
-        nextButton=findViewById(R.id.button_next);
+        //nextButton=findViewById(R.id.button_next);
         toolbar=findViewById(R.id.toolbar);
 
         toolbar.setTitle("Basic Info");
@@ -61,23 +59,14 @@ public class AddPlaceActivity extends AppCompatActivity {
 
                     if(resultCode==RESULT_OK&&requestCode==PICK_IMAGE) {
                         imageUri = data.getData();
+                        imageView.setImageURI(imageUri);
                     }
-                    System.out.println("imageUri "+imageUri);
-                    imageView.setImageURI(imageUri);
-                    editText.setText(imageUri.toString());
                 }
 
 
     @Override
     protected void onResume() {
         super.onResume();
-
-        if(!editText.getText().equals(null))
-        {
-            imageView.setImageURI(imageUri);
-
-        }
-
     }
 
 
