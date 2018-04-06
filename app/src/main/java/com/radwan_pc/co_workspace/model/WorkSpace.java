@@ -8,7 +8,7 @@ import java.util.Map;
  */
 
 public class WorkSpace {
-
+    private String Name;
     private int id;
     private Map<String,String> features;
     private String address;
@@ -16,7 +16,7 @@ public class WorkSpace {
     private String description;
     private List<Integer> roomList;
 
-    public WorkSpace(int id, Map<String, String> features, String address, Map<Integer, Float> userRate, String description, List<Integer> roomList) {
+    public WorkSpace(int id, Map<String, String> features, String address, Map<Integer, Float> userRate, String description, List<Integer> roomList , String Name) {
         this.id = id;
         this.features = features;
         this.address = address;
@@ -72,5 +72,13 @@ public class WorkSpace {
 
     public void setRoomList(List<Integer> roomList) {
         this.roomList = roomList;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
     }
 }

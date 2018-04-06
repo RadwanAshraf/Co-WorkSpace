@@ -67,6 +67,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Name"
                             android:lines="1"
+                            android:pointerIcon="top_left_diagonal_double_arrow"
                             android:inputType="text"
                              />
 
