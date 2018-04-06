@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bb_back"
+        android:title="@string/back"
+        android:icon="@drawable/ic_bottom_bar_arrow_left_black_24dp"
+        />
+
+    <item
+        android:id="@+id/bb_cancel"
+        android:title="@string/cancel"
+        android:icon="@drawable/ic_bottom_bar_cancel_black_24dp"
+        />
+
+    <item
+        android:id="@+id/bb_next"
+        android:title="@string/next"
+        android:icon="@drawable/ic_bottom_bar_arrow_right_black_24dp"
+        />
+
+
+</menu>

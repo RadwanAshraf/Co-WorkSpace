@@ -3,12 +3,16 @@ package com.radwan_pc.co_workspace.view;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -22,7 +26,7 @@ import com.radwan_pc.co_workspace.model.teste;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class AddRoomActivity extends AppCompatActivity implements teste {
+public class AddRoomActivity extends Fragment implements teste {
 
     private ArrayList<Room> roomList;
     private RoomsAdapter roomsAdapter;
@@ -30,24 +34,53 @@ public class AddRoomActivity extends AppCompatActivity implements teste {
     private ListView  listView;
     private FloatingActionButton fab;
     private Toolbar toolbar;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_room);
 
-        toolbar=findViewById(R.id.toolbar);
-        listView=findViewById(R.id.ListView_rooms);
-        fab=findViewById(R.id.FabButton_addRoom);
-        context=getApplicationContext();
+    public AddRoomActivity() {
+
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.activity_add_room, container, false);
+        toolbar=view.findViewById(R.id.toolbar);
+        listView=view.findViewById(R.id.ListView_rooms);
+        fab=view.findViewById(R.id.FabButton_addRoom);
+        context=getContext();
         roomList=new ArrayList<>();
 
         toolbar.setTitle("Rooms");
-        setSupportActionBar(toolbar);
+
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+                int lastItem = firstVisibleItem + visibleItemCount;
+                if(totalItemCount>5){
+                if (totalItemCount==lastItem) {
+                    fab.setVisibility(View.INVISIBLE);
+                } else {
+                    fab.setVisibility(View.VISIBLE);}
+                }
+                else {
+                    fab.setVisibility(View.VISIBLE);
+                }
+            }
+
+        });
 
         fab.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder mBulider=new AlertDialog.Builder(AddRoomActivity.this);
+                AlertDialog.Builder mBulider=new AlertDialog.Builder(context);
                 View mView = getLayoutInflater().inflate(R.layout.dialog_addroom,null);
                 final  EditText maxUserET= mView.findViewById(R.id.ET_maxUser);
                 final  EditText priceET= mView.findViewById(R.id.ET_price);
@@ -79,7 +112,7 @@ public class AddRoomActivity extends AppCompatActivity implements teste {
 
                             roomsAdapter.notifyDataSetChanged();
 
-                            Toast.makeText(context,"Done",Toast.LENGTH_SHORT).show();
+                          //  Toast.makeText(context,"Done",Toast.LENGTH_SHORT).show();
 
                     }
                 });
@@ -90,9 +123,12 @@ public class AddRoomActivity extends AppCompatActivity implements teste {
             }
         });
 
+         return view;
     }
 
 
+
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.add_room_menu,menu);
@@ -112,4 +148,6 @@ public class AddRoomActivity extends AppCompatActivity implements teste {
 
         return super.onOptionsItemSelected(item);
     }
+
+    */
 }

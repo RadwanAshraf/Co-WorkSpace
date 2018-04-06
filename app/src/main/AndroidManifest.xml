@@ -36,8 +36,8 @@
         <activity android:name=".view.RoomsActivity" />
         <activity android:name=".view.AddRoomActivity" />
         <activity android:name=".view.FeaturesActivity" />
-        <activity android:name=".view.AddPlaceActivity"/>
-        <activity android:name=".view.LoginActivity"></activity>
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".AdminActivity"></activity>
     </application>
 
 </manifest>

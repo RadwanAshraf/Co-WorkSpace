@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryLight"
     tools:context="com.radwan_pc.co_workspace.view.AddRoomActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <include layout="@layout/toolbar_layout"/>
@@ -14,9 +18,9 @@
         android:id="@+id/ListView_rooms"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="55dp">
+        android:paddingRight="10dp">
     </ListView>
 
     <android.support.design.widget.FloatingActionButton
@@ -34,3 +38,4 @@
 
 
 </RelativeLayout>
+</FrameLayout>
